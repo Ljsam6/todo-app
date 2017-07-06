@@ -19,7 +19,7 @@ MongoClient.connect('mongodb://localhost:27017/todo-app',(err,db)=>{
 //   console.log('unable to display docs');
 // });
 
-db.collection('users').find({name:'lijo'} ).toArray([0]).then((docs)=>{
+db.collection('users').find({name:'lijo'} ).toArray().then((docs)=>{
   console.log(JSON.stringify(docs,undefined,2));
 },(err)=>{
   console.log('unable to display docs'+err);
